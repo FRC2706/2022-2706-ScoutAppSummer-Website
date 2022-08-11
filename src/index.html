@@ -10,7 +10,7 @@
 
     <button type="button" onclick="getURL();">Retrieve Data</button>
     <p id="data"></p>
-
+    <!--Retrieve data when website loads-->
     <script>
 
         function getURL() {
@@ -24,8 +24,20 @@
                 }
             }
             data.innerHTML = URLFragment;
-        }
-      
+            alert('Data retrieved');
+
+            
+            for (let i =0; i < URLFragment.length; i++) {
+                if (URLFragment[i] == "|") {
+                    URLFragment = URLFragment.substring(0, i);
+                    break;
+                }
+            }
+
+            if(URLFragment == "") {
+                alert('No data found');
+            }
+        }      
     </script>
         
 
