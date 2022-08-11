@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FRC Team 2760</title>
+</head>
+<body>
+
+    <button type="button" onclick="getURL();">Retrieve Data</button>
+    <p id="data"></p>
+
+    <script>
+
+        function getURL() {
+            let websiteURL = window.location.href;  
+            let URLFragment;
+
+            for (let i =0; i < websiteURL.length; i++) {
+                if (websiteURL[i] == "#") {
+                    URLFragment = websiteURL.substring(i+1, websiteURL.length);
+                    break;
+                }
+            }
+            data.innerHTML = URLFragment;
+        }
+      
+    </script>
+        
+
+</body>
+</html>
