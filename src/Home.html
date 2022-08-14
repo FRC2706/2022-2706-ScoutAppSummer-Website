@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FRC Team 2760</title>
+
+    <style>
+        table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 1000px;
+        }
+        
+        td, th {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 5px;
+        }
+        
+        tr:nth-child(even) {
+          background-color: #dddddd;
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- <button type="button" onclick="getURL();"></button> -->
+    <p id="data"></p>
+
+    <h2>Data</h2>
+
+    <table>
+    <tr>
+        <th>Cycle #</th>
+        <th>Start Time</th>
+        <th>End Time</th>
+        <th>Total Time Used</th>
+        <th># Balls Picked Up</th>
+        <th>High Goals</th>
+        <th>Low Goals</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td id="c1StartTime">No Value</td>
+        <td id="c1EndTime">No Value</td>
+        <td id="c1TotalTime">No Value</td>
+        <td id="c1BallsPickedUp">No Value</td>
+        <td id="c1HighGoals">No Value</td>
+        <td id="c1LowGoals">No Value</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td id="c2StartTime">No Value</td>
+        <td id="c2EndTime">No Value</td>
+        <td id="c2TotalTime">No Value</td>
+        <td id="c2BallsPickedUp">No Value</td>
+        <td id="c2HighGoals">No Value</td>
+        <td id="c2LowGoals">No Value</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td id="c3StartTime">No Value</td>
+        <td id="c3EndTime">No Value</td>
+        <td id="c3TotalTime">No Value</td>
+        <td id="c3BallsPickedUp">No Value</td>
+        <td id="c3HighGoals">No Value</td>
+        <td id="c3LowGoals">No Value</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td id="c4StartTime">No Value</td>
+        <td id="c4EndTime">No Value</td>
+        <td id="c4TotalTime">No Value</td>
+        <td id="c4BallsPickedUp">No Value</td>
+        <td id="c4HighGoals">No Value</td>
+        <td id="c4LowGoals">No Value</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td id="c5StartTime">No Value</td>
+        <td id="c5EndTime">No Value</td>
+        <td id="c5TotalTime">No Value</td>
+        <td id="c5BallsPickedUp">No Value</td>
+        <td id="c5HighGoals">No Value</td>
+        <td id="c5LowGoals">No Value</td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td id="c6StartTime">No Value</td>
+        <td id="c6EndTime">No Value</td>
+        <td id="c6TotalTime">No Value</td>
+        <td id="c6BallsPickedUp">No Value</td>
+        <td id="c6HighGoals">No Value</td>
+        <td id="c6LowGoals">No Value</td>
+    </tr>
+    </table>
+
+    <p>Comments: </p>
+
+    <script>
+
+        window.onload = function getURL() {
+            let websiteURL = window.location.href;  
+            let URLFragment;
+
+            for (let i =0; i < websiteURL.length; i++) {
+                if (websiteURL[i] == "#") {
+                    URLFragment = websiteURL.substring(i+1, websiteURL.length);
+                    break;
+                }
+            }
+            data.innerHTML = URLFragment;
+            
+            for (let i =0; i < URLFragment.length; i++) {
+                if (URLFragment[i] == "|") {
+                    URLFragment = URLFragment.substring(0, i);
+                    break;
+                }
+            }
+
+            // c1StartTime.innerHTML = URLFragment.substring(0, URLFragment.indexOf("|"));
+
+            c1StartTime.innerHTML = 120;
+        }      
+    </script>
+        
+
+</body>
+</html>
